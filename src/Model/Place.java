@@ -8,6 +8,8 @@ public class Place {
     private Room room;
     private BigDecimal price;
     private int placeNumber;
+    private Enum status;
+
 
     public Place(int id, Room room, BigDecimal price, int placeNumber, Enum status) {
         this.id = id;
@@ -57,6 +59,14 @@ public class Place {
         this.status = status;
     }
 
-    private Enum status;
-
+    @Override
+    public String toString() {
+        return "Place{" +
+                "id=" + id +
+                ", room=" + room +
+                ", price=" + price +
+                ", placeNumber=" + placeNumber +
+                ", status=" + status +
+                '}';
+    }
 }

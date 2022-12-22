@@ -2,10 +2,10 @@ package Model;
 
 import java.math.BigDecimal;
 
-public class Order {
+public class order {
     private int id;
     private User user;
-    private Coworking place;
+    private Place place;
     private BigDecimal sum;
     private String dateFrom;
     private String dateTo;
@@ -18,7 +18,7 @@ public class Order {
         this.dateTo = dateTo;
     }
 
-    public Order(int id, User user, Coworking place, BigDecimal sum, String date, String dateTo) {
+    public order(int id, User user, Place place, BigDecimal sum, String date, String dateTo) {
         this.id = id;
         this.user = user;
         this.place = place;
@@ -43,11 +43,11 @@ public class Order {
         this.user = user;
     }
 
-    public Coworking getPlace() {
+    public Place getPlace() {
         return place;
     }
 
-    public void setPlace(Coworking place) {
+    public void setPlace(Place place) {
         this.place = place;
     }
 

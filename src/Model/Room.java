@@ -5,6 +5,10 @@ import java.math.BigDecimal;
 public class Room {
     private int id;
     private String name;
+    private Coworking coworking;
+    private int floorNumber;
+    private int numberOfPlaces;
+    private BigDecimal pricePerPlace;
 
     public Room(int id, String name, Coworking coworking, int floorNumber, int numberOfPlaces, BigDecimal pricePerPlace) {
         this.id = id;
@@ -62,10 +66,5 @@ public class Room {
     public void setPricePerPlace(BigDecimal pricePerPlace) {
         this.pricePerPlace = pricePerPlace;
     }
-
-    private Coworking coworking;
-    private int floorNumber;
-    private int numberOfPlaces;
-    private BigDecimal pricePerPlace;
 
 }

@@ -29,7 +29,7 @@ public class OpenUserConsole {
     }
 
     private static void MyBookedPlaces(User user) {
-        for (Order order : orders) {
+        for (Model.order order : orders) {
             if (order.getUser().equals(user)) {
                 System.out.println("Place: " + order.getPlace() + "\n Price: " + order.getSum() + "\n From: " + order.getDateFrom() + "\n To : " + order.getDateTo());
             }
@@ -67,7 +67,8 @@ static int id=0;
         String dateFrom = scanner.nextLine();
         System.out.println("Date to: ");
         String dateTo = scanner.nextLine();
-        Order order = new Order(id,user,coworking,place.getPrice(),dateFrom,dateTo);
+        place.setStatus(Status.BOOKED);
+        order order = new order(id,user,place,place.getPrice(),dateFrom,dateTo);
         orders.add(order);
         BigDecimal balance = user.getBalance();
         BigDecimal a;
